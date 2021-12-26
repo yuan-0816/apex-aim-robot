@@ -13,22 +13,19 @@ import sys
 from sys import platform
 import os
 
-# Import Openpose (Windows)
+# Import Openpose as op (Windows)
 dir_path = os.path.dirname(os.path.realpath(__file__))
 try:
-    # Windows Import
     if platform == "win32":
         sys.path.append(dir_path + '/openpose-v1.7.0/build/python/openpose/Release');
         os.environ['PATH']  = os.environ['PATH'] + ';' \
                               + dir_path + '/openpose-v1.7.0/build/x64/Release;' \
                               +  dir_path + '/openpose-v1.7.0/build/bin;'
         import pyopenpose as op
-
 except ImportError as e:
     print('Error: OpenPose library could not be found. '
           'Did you enable `BUILD_PYTHON` in CMake and have this Python script in the right folder?')
     raise e
-
 
 # from pynput.keyboard import Controller, Listener
 # import threading
@@ -180,13 +177,15 @@ def main():
                 elif Mode == 2:
                     # calculate the middle point in body
                     pass
+
+
         # show FPS
         FPS = int(1 / (time.time() - last_time))
         if paused == True:
             cv.putText(img_BGR, str(FPS), (10, 35), cv.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
         else:
             cv.putText(img_BGR, str(FPS), (10, 35), cv.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
-
+        # print(type(img_BGR))
         cv.imshow(screen, img_BGR)
 
         if cv.waitKey(30) == ord('q'):
@@ -195,5 +194,5 @@ def main():
 
 
 if __name__ == "__main__":
-    # main()
-    pass
+
+    main()
