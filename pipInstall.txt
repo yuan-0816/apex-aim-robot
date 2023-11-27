@@ -1,0 +1,8 @@
+numpy
+opencv-python
+pyautogui
+mss
+python-pillow
+win32api
+win32con
+tensorflow
