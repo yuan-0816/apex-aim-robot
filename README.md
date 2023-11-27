@@ -1,7 +1,9 @@
 # apex-aim-robot
 ## Intoduction
 This is a hack for a shooting game made using human body skeleton keypoint detection.
-[![](https://github.com/yuan-0816/apex-aim-robot/blob/main/materials/game1.png)
+
+
+![](https://github.com/yuan-0816/apex-aim-robot/blob/main/materials/game1.png)
 
 ## Install 
 install all pakages in your python environment [pipInstall.txt](https://github.com/yuan-0816/apex-aim-robot/blob/main/pipInstall.txt)
