@@ -1,6 +1,6 @@
 # apex-aim-robot
 ## Intoduction
-This is a hack for a shooting game made using human body skeleton keypoint detection.
+This is a hack for a shooting game made using human body keypoint detection.
 
 
 ![](https://github.com/yuan-0816/apex-aim-robot/blob/main/materials/game1.png)
